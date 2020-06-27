@@ -36,7 +36,7 @@ class GETSpring5
 		URL = "http://api.openweathermap.org";
 		client = WebTestClient.bindToServer().baseUrl(URL).build();
 		String city = "Prague";
-		String appid = "a176e0999da6ade934326ce91abde8ea";
+		String appid = ""; // insert your appid
 		
 		EntityExchangeResult<String> result = client.get()
 				.uri("/data/2.5/weather?q={city}&appid={appid}", city, appid)
