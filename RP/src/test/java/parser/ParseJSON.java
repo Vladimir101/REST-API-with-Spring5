@@ -1,7 +1,5 @@
 package parser;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.io.IOException;
 
 import org.json.JSONArray;

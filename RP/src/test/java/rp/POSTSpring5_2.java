@@ -35,7 +35,8 @@ public class POSTSpring5_2
 				.contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
                 .header("MyRequestHeader", "MyValue") // custom header
-                .body(Mono.just(address), Address.class) 
+//                .body(Mono.just(address), Address.class) 
+                .body(BodyInserters.fromValue(address))
 		        .exchange()
 		        .expectStatus().isOk()
 		        .expectBody(String.class)
