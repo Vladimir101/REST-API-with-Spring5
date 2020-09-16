@@ -1,18 +1,55 @@
 package pages;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+//@JsonIgnoreProperties(ignoreUnknown = true)
 public class TimezonePage
 {
-	private String week_number;
-	private String utc_offset;
-	private String unixtime;
-	private String timezone;
-	private String dst_until = null;
-	private String dst_from = null;
-	private boolean dst;
-	private float day_of_year;
-	private float day_of_week;
-	private String datetime;
 	private String abbreviation;
+	private String client_ip;
+	private String datetime;
+	private float day_of_week;
+	private float day_of_year;
+	private boolean dst;
+	private String dst_from = null;
+	private int dst_offset;
+	private String dst_until = null;
+	private int raw_offset;
+	private String timezone;
+	private String unixtime;
+	private String utc_datetime;
+	private String utc_offset;
+	private String week_number;
+	
+	public String getUtc_datetime()
+	{
+		return utc_datetime;
+	}
+
+	public void setUtc_datetime(String utc_datetime)
+	{
+		this.utc_datetime = utc_datetime;
+	}
+
+	public int getRaw_offset()
+	{
+		return raw_offset;
+	}
+
+	public void setRaw_offset(int raw_offset)
+	{
+		this.raw_offset = raw_offset;
+	}
+	
+	public int getDst_offset()
+	{
+		return dst_offset;
+	}
+
+	public void setDst_offset(int dst_offset)
+	{
+		this.dst_offset = dst_offset;
+	}
 
 	// Getter Methods
 	public String getWeek_number()
@@ -70,7 +107,12 @@ public class TimezonePage
 		return abbreviation;
 	}
 
-	// Setter Methods
+	public String getClient_ip()
+	{
+		return client_ip;
+	}
+	
+// Setter Methods
 	public void setWeek_number(String week_number)
 	{
 		this.week_number = week_number;
@@ -124,5 +166,10 @@ public class TimezonePage
 	public void setAbbreviation(String abbreviation)
 	{
 		this.abbreviation = abbreviation;
+	}
+	
+	public void setClient_ip(String client_ip)
+	{
+		this.client_ip = client_ip;
 	}
 }
