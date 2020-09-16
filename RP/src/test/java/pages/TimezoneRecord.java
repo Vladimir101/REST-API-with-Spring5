@@ -33,21 +33,22 @@ public record TimezoneRecord(
 	 @JsonProperty("abbreviation") String abbreviation,
 	 @JsonProperty("client_ip") String client_ip) 
 {
-	public TimezoneRecord()
-	{
-		this.abbreviation = "";
-		this.client_ip = "";
-		this.datetime = "";
-		this.day_of_week = 0;
-		this.day_of_year = 0;
-		this.dst = false;
-		this.dst_from = "";
-		this.dst_offset = "";
-		this.dst_until = "";
-		this.raw_offset = 0;
-		this.timezone = "";
-		this.unixtime = 0;
-		this.utc_datetime = "";
-		this.utc_offset = "";
-		this.week_number = 0;}
+	  public TimezoneRecord()
+	  {
+		  this.abbreviation = "";
+		  this.client_ip = "";
+		  this.datetime = "";
+		  this.day_of_week = 0;
+		  this.day_of_year = 0;
+		  this.dst = false;
+		  this.dst_from = "";
+		  this.dst_offset = "";
+		  this.dst_until = "";
+		  this.raw_offset = 0;
+		  this.timezone = "";
+		  this.unixtime = 0;
+		  this.utc_datetime = "";
+		  this.utc_offset = "";
+		  this.week_number = 0;
+	  }
 }
