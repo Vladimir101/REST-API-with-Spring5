@@ -2,6 +2,7 @@ package pages;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+// use the annotation below if some fields are missing
 //@JsonIgnoreProperties(ignoreUnknown = true)
 public class TimezonePage
 {
@@ -21,6 +22,7 @@ public class TimezonePage
 	private String utc_offset;
 	private String week_number;
 	
+// getters and setters	
 	public String getUtc_datetime()
 	{
 		return utc_datetime;
@@ -51,7 +53,6 @@ public class TimezonePage
 		this.dst_offset = dst_offset;
 	}
 
-	// Getter Methods
 	public String getWeek_number()
 	{
 		return week_number;
@@ -111,8 +112,7 @@ public class TimezonePage
 	{
 		return client_ip;
 	}
-	
-// Setter Methods
+
 	public void setWeek_number(String week_number)
 	{
 		this.week_number = week_number;
