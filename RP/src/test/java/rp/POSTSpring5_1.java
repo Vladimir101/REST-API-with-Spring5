@@ -49,4 +49,27 @@ class POSTSpring5_1
 			.returnResult();
 		System.out.println(result.getResponseBody());
 	}
+	
+	@Test
+	void POST2()
+	{
+		URL = "http://httpbin.org";
+		String postBody = """
+		        {
+		          "foo": "bar"
+		        }
+		      """;
+		client = WebTestClient.bindToServer().baseUrl(URL).build();
+		
+		EntityExchangeResult<String> result = client.post().uri("/post")
+			.contentType(MediaType.APPLICATION_JSON)
+			.body(BodyInserters.fromValue(postBody))
+			.exchange()
+			.expectStatus().isOk()
+			.expectBody(String.class)
+			.returnResult();
+		
+		System.out.println("Response Content-Type: " + result.getResponseHeaders().getContentType());
+		System.out.println(result.getResponseBody());
+	}
 }
